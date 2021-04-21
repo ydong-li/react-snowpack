@@ -2,13 +2,22 @@
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
+    "ss": "NODE_ENV=development BABEL_ENV=development nodemon -e '*' --watch content --watch server --exec \"babel-node server -x '.js','.jsx' --config-file ./babel-ssr.config.json\" ",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1"
   },
   "devDependencies": {
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-transform-react-jsx": "^7.13.12",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-react": "^7.13.13",
     "@snowpack/plugin-react-refresh": "^2.4.2",
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.4",
     "snowpack": "^3.0.1"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }

@@ -23,6 +23,10 @@ module.exports = {
     /* ... */
   },
   buildOptions: {
+    ssr: true,
     /* ... */
+    jsxInject: `
+      import React from 'react'
+    `
   },
 };

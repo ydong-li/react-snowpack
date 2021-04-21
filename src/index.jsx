@@ -1,7 +1,10 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import {App} from './components/App'
-ReactDOM.render(<App />, document.getElementById('root'));
+import App from './components/App'
+
+const render =
+  typeof window === "undefined" ? ReactDOM.hydrate : ReactDOM.render;
+
+render(<App />, document.getElementById('root'));
 
  // Hot Module Replacement (HMR) - Remove this snippet to remove HMR.
  // Learn more: https://www.snowpack.dev/concepts/hot-module-replacement

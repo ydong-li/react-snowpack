@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 
-export function App() {
+export default function App() {
   // Create the count state.
   const [count, setCount] = useState(0);
   // Update the count (+1 every second).
@@ -25,3 +25,8 @@ export function App() {
     </div>
   );
 }
+
+
+
+
+
